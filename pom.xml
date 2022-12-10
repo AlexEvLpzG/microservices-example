@@ -6,7 +6,12 @@
 
     <groupId>com.alexiskyline</groupId>
     <artifactId>microservices-example</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>customer</module>
+    </modules>
 
     <name>microservices-example</name>
     <url>https://www.alexiskyline.com</url>
