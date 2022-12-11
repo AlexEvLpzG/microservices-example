@@ -3,10 +3,14 @@ package com.alexiskyline.customer.service;
 import com.alexiskyline.customer.model.Customer;
 import com.alexiskyline.customer.model.CustomerRegistrationRequest;
 import com.alexiskyline.customer.repository.CustomerRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public record CustomerService( CustomerRepository customerRepository ) {
+@AllArgsConstructor
+public class CustomerService {
+    private final CustomerRepository customerRepository;
+
     public void registerCustomer( CustomerRegistrationRequest request ) {
         Customer customer = Customer.builder()
                 .firstName( request.fistName() )
