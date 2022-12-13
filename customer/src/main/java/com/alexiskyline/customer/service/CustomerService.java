@@ -28,7 +28,7 @@ public class CustomerService {
 
         // todo: check if fraud
         FraudCheckHistoryResponse fraudCheckHistoryResponse = this.restTemplate.getForObject(
-                "http://localhost:8081/api/v1/fraud-check/{customerId}",
+                "http://FRAUD/api/v1/fraud-check/{customerId}",
                 FraudCheckHistoryResponse.class,
                 customer.getId()
         );
